@@ -6,6 +6,19 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+model JobListing {
+  id               String     @id @default(auto()) @map("_id") @db.ObjectId
+  title            String
+  companyName      String
+  location         String
+  salary           String
+  type             String
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  expiresAt        DateTime?
+  postedAt         DateTime?
 }
