@@ -2,7 +2,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import InputWithLabel from '../jobs/input-job'
 import { DropDown } from '@/components/dropdown'
-import SubmitButton from '@/components/submit-button'
+// import SubmitButton from '@/components/submit-button'
 import createJobs from '@/actions/create-job'
 import { toast } from 'react-hot-toast'
 import { redirect } from 'next/navigation'
@@ -99,7 +99,7 @@ export default function CreateJobClient() {
 
         <input type="hidden" value={value} name='type' onChange={onChange}/>
         <DropDown value={value} setValue={setValue} jobType={jobType}/>
-        <SubmitButton label='Create'/>
+        <button type='submit'>sub</button>
         </form>
     </div>
   )

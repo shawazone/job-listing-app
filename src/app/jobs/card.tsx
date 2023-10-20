@@ -1,7 +1,7 @@
 'use client'
 
 import deleteJob from "@/actions/delete-job";
-import SubmitButton from "@/components/submit-button";
+// import SubmitButton from "@/components/submit-button";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
@@ -43,7 +43,7 @@ export default function Card({title,id,companyName,location,salary,type,desc}:Ca
                 toast.success('Job deleted successfully!')
             }}>
                 <input type="hidden" name="jobId" value={id} id="jobId"/>
-                <SubmitButton label="Delete"/>
+                <Button type='submit' ></Button>
             </form>
             <Button onClick={() => router.push(`/jobs/${id}`)}>View More</Button>
         </div>
