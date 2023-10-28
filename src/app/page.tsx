@@ -4,4 +4,7 @@ export default function Home() {
  redirect('/jobs')
 
  
+
+
+ //F
 }
